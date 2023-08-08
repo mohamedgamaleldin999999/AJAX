@@ -3,6 +3,8 @@ let xhr = new XMLHttpRequest();
 xhr.open('POST', url, true);
 
 let fd = new FormData();
+fd.append('firstName', 'Mohamed');
+fd.append('lastName', 'Gamaleldin');
 
 xhr.onreadystatechange = function(ev) {
   console.log(xhr.readyState);
@@ -38,7 +40,7 @@ xhr.onerror = function(err) {
   console.warn(err)
 };
 
-xhr.send(null);
+xhr.send(fd);
 
 function outputUsers(str) {
   let main = document.querySelector('main');
