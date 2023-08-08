@@ -1,6 +1,8 @@
 let url = 'https://jsonplaceholder.typicode.com/users';
 let xhr = new XMLHttpRequest();
-xhr.open('GET', url, true);
+xhr.open('POST', url, true);
+
+let fd = new FormData();
 
 xhr.onreadystatechange = function(ev) {
   console.log(xhr.readyState);
