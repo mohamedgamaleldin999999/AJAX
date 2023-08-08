@@ -3,7 +3,7 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET', url, true);
 
 xhr.onreadystatechange = function(ev) {
-  console.log(xhr.readystate)
+  console.log(xhr.readyState)
 };
 
 xhr.onerror = function(err) {
