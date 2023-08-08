@@ -37,3 +37,13 @@ xhr.onerror = function(err) {
 };
 
 xhr.send(null);
+
+function outputUsers(str) {
+  let main = document.querySelector('main');
+  let data = JSON.parse(str);
+  data.forEach(item => {
+    let p = document.createElement('p');
+    p.textContent = item.id + ' ' + item.name;
+    main.appendChild(p);
+  });
+};
